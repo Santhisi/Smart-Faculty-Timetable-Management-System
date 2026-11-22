@@ -1,0 +1,180 @@
+/* RESPONSE DIALOG OVERLAY */
+
+.request-dialog-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    padding: 20px;
+}
+
+
+/* RESPONSE DIALOG */
+
+.request-dialog {
+    width: 100%;
+    max-width: 450px;
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: requestDialogShow 0.2s ease;
+}
+
+
+/* DIALOG ICON */
+
+.request-dialog-icon {
+    width: 55px;
+    height: 55px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    background: #eff6ff;
+    color: #2563eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+
+/* DIALOG HEADING */
+
+.request-dialog h2 {
+    font-size: 22px;
+    color: #173f70;
+    margin-bottom: 10px;
+}
+
+
+/* DIALOG DESCRIPTION */
+
+.request-dialog p {
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+
+/* RESPONSE TEXTAREA */
+
+.request-response-textarea {
+    width: 100%;
+    min-height: 110px;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 9px;
+    font-size: 14px;
+    font-family: inherit;
+    resize: vertical;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.request-response-textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+
+/* BUTTON CONTAINER */
+
+.request-dialog-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 22px;
+}
+
+
+/* COMMON BUTTON STYLE */
+
+.request-dialog-buttons button {
+    padding: 11px 18px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.request-dialog-buttons button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+/* CANCEL BUTTON */
+
+.request-dialog-cancel {
+    background: #e2e8f0;
+    color: #334155;
+}
+
+.request-dialog-cancel:hover:not(:disabled) {
+    background: #cbd5e1;
+}
+
+
+/* APPROVE BUTTON */
+
+.request-dialog-approve {
+    background: #16a34a;
+    color: white;
+}
+
+.request-dialog-approve:hover:not(:disabled) {
+    background: #15803d;
+}
+
+
+/* REJECT BUTTON */
+
+.request-dialog-reject {
+    background: #dc2626;
+    color: white;
+}
+
+.request-dialog-reject:hover:not(:disabled) {
+    background: #b91c1c;
+}
+
+
+/* ANIMATION */
+
+@keyframes requestDialogShow {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+
+    .request-dialog {
+        padding: 22px;
+    }
+
+    .request-dialog-buttons {
+        flex-direction: column;
+    }
+
+    .request-dialog-buttons button {
+        width: 100%;
+    }
+}

@@ -1,0 +1,37 @@
+.success-icon {
+    background: #dcfce7;
+    color: #16a34a;
+    border: 2px solid #86efac;
+}
+
+.error-icon {
+    background: #fee2e2;
+    color: #dc2626;
+    border: 2px solid #fca5a5;
+}
+
+.status-ok {
+    min-width: 110px;
+    padding: 11px 25px;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.success-button {
+    background: #16a34a;
+}
+
+.success-button:hover {
+    background: #15803d;
+}
+
+.error-button {
+    background: #dc2626;
+}
+
+.error-button:hover {
+    background: #b91c1c;
+}

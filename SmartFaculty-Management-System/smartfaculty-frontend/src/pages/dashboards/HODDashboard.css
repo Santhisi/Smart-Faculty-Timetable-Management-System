@@ -1,0 +1,275 @@
+/* =========================================================
+   HOD DASHBOARD
+   ========================================================= */
+
+.hod-page {
+    min-height: 100vh;
+    background: #f4f7fa;
+    color: #294765;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.hod-page,
+.hod-page * {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.hod-header {
+    width: 100%;
+    min-height: 94px;
+    background: #294b6d;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 42px;
+    box-sizing: border-box;
+}
+
+.hod-brand h1 { margin: 0; color: #ffffff; font-size: 22px; font-weight: 700; }
+.hod-brand p { margin: 9px 0 0; color: #dbe6f0; font-size: 13px; font-weight: 600; }
+.hod-header-actions { display: flex; align-items: center; gap: 12px; }
+
+.hod-notification-button,
+.hod-logout-button {
+    min-height: 38px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.hod-notification-button {
+    position: relative;
+    min-width: 110px;
+    padding: 0 16px;
+    border: 1px solid #d7e2ec;
+    background: #294b6d;
+    color: #ffffff;
+}
+
+.hod-notification-button:hover { background: #365b80; }
+
+.hod-notification-badge {
+    position: absolute;
+    top: -8px;
+    right: -7px;
+    min-width: 20px;
+    height: 20px;
+    padding: 0 4px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    background: #e74c3c;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.hod-logout-button { min-width: 84px; padding: 0 17px; border: none; background: #ffffff; color: #294b6d; }
+.hod-logout-button:hover { background: #edf2f6; }
+
+.hod-content { width: calc(100% - 80px); max-width: 1100px; margin: 0 auto; padding: 30px 0 30px; }
+
+.hod-welcome-card {
+    background: #ffffff;
+    border: 1px solid #d7e1ea;
+    border-radius: 10px;
+    padding: 28px;
+    text-align: center;
+    box-shadow: 0 2px 7px rgba(41, 71, 101, 0.08);
+    margin-bottom: 25px;
+}
+
+.hod-welcome-card h2 { margin: 0; color: #294765; font-size: 27px; }
+.hod-welcome-card p { margin: 10px 0 0; color: #72859a; font-size: 15px; }
+.hod-welcome-card strong { color: #294765; }
+
+.hod-error { background: #fff2f0; border: 1px solid #efc5bf; color: #a33a2b; padding: 13px 16px; border-radius: 7px; margin-bottom: 20px; }
+
+.hod-summary-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-bottom: 25px; }
+.hod-summary-card { background: #ffffff; border: 1px solid #d7e1ea; border-radius: 9px; padding: 21px 20px; min-height: 105px; box-sizing: border-box; box-shadow: 0 2px 7px rgba(41, 71, 101, 0.07); border-top: 4px solid #294b6d; }
+.hod-summary-label { color: #71859a; font-size: 13px; font-weight: 600; margin-bottom: 10px; }
+.hod-summary-number { color: #294765; font-size: 29px; font-weight: 700; }
+
+.hod-section,
+.hod-information-card {
+    background: #ffffff;
+    border: 1px solid #d7e1ea;
+    border-radius: 10px;
+    padding: 25px 30px;
+    box-shadow: 0 2px 7px rgba(41, 71, 101, 0.07);
+    margin-bottom: 25px;
+    box-sizing: border-box;
+}
+
+.hod-section-header { display: flex; justify-content: space-between; align-items: center; gap: 20px; margin-bottom: 22px; }
+.hod-section-header h2 { margin: 0; color: #294765; font-size: 21px; }
+.hod-section-header p { margin: 7px 0 0; color: #788b9e; font-size: 13px; }
+
+.hod-filters { display: grid; grid-template-columns: 190px 190px minmax(250px, 1fr) auto; gap: 15px; align-items: end; padding: 17px; background: #f5f8fb; border: 1px solid #dce5ec; border-radius: 8px; margin-bottom: 20px; }
+.hod-filter-group { display: flex; flex-direction: column; gap: 7px; }
+.hod-filter-group label { color: #4e667f; font-size: 12px; font-weight: 700; }
+.hod-filter-group select,
+.hod-filter-group input { width: 100%; height: 40px; box-sizing: border-box; padding: 0 11px; border: 1px solid #cbd8e4; border-radius: 5px; background: #ffffff; color: #294765; font-size: 14px; outline: none; }
+.hod-filter-group select option { color: #294765; background: #ffffff; }
+.hod-filter-group select:focus,
+.hod-filter-group input:focus { border-color: #52799d; }
+
+.hod-clear-button { height: 40px; padding: 0 18px; border: 1px solid #c3d0dc; border-radius: 5px; background: #ffffff; color: #294765; font-weight: 600; cursor: pointer; }
+.hod-clear-button:hover { background: #edf2f6; }
+
+.hod-primary-button { height: 40px; padding: 0 18px; border: none; border-radius: 5px; background: #294b6d; color: #ffffff; font-size: 14px; font-weight: 600; cursor: pointer; }
+.hod-primary-button:hover { background: #365d80; }
+.hod-primary-button:disabled { opacity: 0.65; cursor: not-allowed; }
+
+.hod-table-wrapper { width: 100%; overflow-x: auto; }
+.hod-allocation-table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+.hod-allocation-table .col-number { width: 6%; text-align: center; }
+.hod-allocation-table .col-lecturer { width: 24%; text-align: center; }
+.hod-allocation-table .col-subject { width: 25%; text-align: center; }
+.hod-allocation-table .col-year { width: 15%; text-align: center; }
+.hod-allocation-table .col-semester { width: 14%; text-align: center; }
+.hod-allocation-table .col-actions { width: 16%; text-align: center; }
+.hod-allocation-table thead tr { background: #edf3f7; }
+.hod-allocation-table th { height: 48px; padding: 10px 12px; box-sizing: border-box; color: #294765; border-bottom: 1px solid #d5e0e9; font-size: 14px; font-weight: 700; vertical-align: middle; text-align: center; }
+.hod-allocation-table td { padding: 14px 12px; border-bottom: 1px solid #e2e8ee; color: #405a72; font-size: 14px; vertical-align: middle; box-sizing: border-box; text-align: center; }
+.hod-allocation-table tbody tr:hover { background: #f8fafc; }
+.hod-allocation-table td strong { color: #294765; font-weight: 700; }
+.hod-subject-name { display: block; margin-top: 4px; color: #8092a4; font-size: 12px; }
+.hod-action-buttons { display: flex; justify-content: center; align-items: center; gap: 7px; }
+.hod-edit-button,
+.hod-delete-button { min-width: 57px; height: 32px; border-radius: 4px; font-size: 13px; font-weight: 600; cursor: pointer; }
+.hod-edit-button { border: 1px solid #b7cadb; background: #ffffff; color: #294b6d; }
+.hod-edit-button:hover { background: #edf3f7; }
+.hod-delete-button { border: 1px solid #e1bbb6; background: #ffffff; color: #b34235; }
+.hod-delete-button:hover { background: #fff3f1; }
+.hod-empty-cell { height: 90px; text-align: center !important; color: #8192a3 !important; font-size: 14px !important; }
+.hod-result-count { margin-top: 14px; color: #8191a1; font-size: 12px; }
+
+.hod-allocation-form { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.hod-form-group { display: flex; flex-direction: column; gap: 7px; }
+.hod-form-group label { color: #405b74; font-size: 13px; font-weight: 700; }
+.hod-form-group select { width: 100%; height: 43px; padding: 0 12px; border: 1px solid #cbd8e4; border-radius: 5px; background: #ffffff; color: #294765; font-size: 14px; outline: none; }
+.hod-form-group select option { color: #294765; background: #ffffff; }
+.hod-form-group select:focus { border-color: #52799d; }
+.hod-form-group select:disabled { background: #f1f4f7; color: #8797a7; cursor: not-allowed; }
+.hod-form-help { color: #7890a5; font-size: 12px; }
+.hod-form-actions { grid-column: 1 / -1; display: flex; justify-content: flex-end; gap: 10px; padding-top: 5px; }
+.hod-secondary-button { height: 40px; padding: 0 18px; border: 1px solid #c3d1dd; border-radius: 5px; background: #ffffff; color: #294765; font-size: 14px; font-weight: 600; cursor: pointer; }
+.hod-secondary-button:hover { background: #edf2f6; }
+
+/* =========================================================
+   MY INFORMATION
+   ========================================================= */
+
+.hod-information-card h3 { margin: 0 0 22px; color: #23415f; font-size: 19px; font-weight: 700; text-align: center; }
+.hod-information-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 25px; text-align: center; }
+.hod-information-item { min-width: 0; }
+.hod-information-label { margin-bottom: 6px; color: #23415f; font-size: 12px; }
+.hod-information-value { color: #23415f; font-size: 15px; font-weight: 600; line-height: 1.5; }
+.hod-information-email { word-break: break-word; }
+
+/* =========================================================
+   NOTIFICATIONS
+   ========================================================= */
+
+.hod-notification-section { margin-bottom: 25px; }
+.hod-notification-actions { display: flex; align-items: center; justify-content: flex-end; gap: 10px; flex-wrap: wrap; }
+.hod-notification-list { display: grid; gap: 12px; }
+.hod-notification-card { padding: 16px; border: 1px solid #d5e0e8; border-radius: 8px; background: #ffffff; cursor: default; transition: background 0.15s ease, border-color 0.15s ease; }
+.hod-notification-card.hod-notification-unread { background: #eef6ff; border-color: #b9d3ea; cursor: pointer; }
+.hod-notification-card.hod-notification-unread:hover { background: #e5f1fc; }
+.hod-notification-card-header { display: flex; align-items: center; justify-content: space-between; gap: 15px; }
+.hod-notification-card-header strong { color: #23415f; font-size: 14px; font-weight: 700; }
+.hod-new-badge { flex: 0 0 auto; padding: 4px 8px; border-radius: 999px; background: #e74c3c; color: #ffffff; font-size: 10px; font-weight: 700; letter-spacing: 0.3px; }
+.hod-notification-message { margin: 8px 0; color: #334e68; font-size: 14px; line-height: 1.5; }
+.hod-notification-date { color: #777777; font-size: 12px; }
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.hod-footer { text-align: center; padding: 20px; color: #23415f; font-size: 12px; font-family: Arial, Helvetica, sans-serif; }
+
+.hod-loading { min-height: 100vh; display: flex; align-items: center; justify-content: center; color: #294765; background: #f4f7fa; font-size: 16px; font-weight: 600; }
+
+@media (max-width: 900px) {
+    .hod-summary-grid { grid-template-columns: repeat(2, 1fr); }
+    .hod-information-grid { grid-template-columns: repeat(2, 1fr); }
+    .hod-filters { grid-template-columns: 1fr 1fr; }
+    .hod-search-group { grid-column: 1 / -1; }
+    .hod-clear-button { width: 100%; }
+}
+
+@media (max-width: 650px) {
+    .hod-header { padding: 15px 20px; flex-direction: column; align-items: flex-start; gap: 15px; }
+    .hod-header-actions { width: 100%; }
+    .hod-notification-button, .hod-logout-button { flex: 1; }
+    .hod-content { width: calc(100% - 30px); }
+    .hod-summary-grid { grid-template-columns: 1fr; }
+    .hod-information-grid { grid-template-columns: 1fr; gap: 18px; }
+    .hod-information-card { padding: 20px 15px; }
+    .hod-filters { grid-template-columns: 1fr; }
+    .hod-search-group { grid-column: auto; }
+    .hod-section { padding: 20px 15px; }
+    .hod-section-header { flex-direction: column; align-items: flex-start; }
+    .hod-notification-actions { width: 100%; justify-content: stretch; }
+    .hod-notification-actions button { flex: 1; }
+    .hod-allocation-form { grid-template-columns: 1fr; }
+    .hod-form-actions { grid-column: auto; justify-content: stretch; }
+    .hod-form-actions button { flex: 1; }
+}
+
+/* =========================================================
+   NOTIFICATION POSITION
+   Notifications are outside .hod-content so they stay
+   directly below the header and above HOD Dashboard.
+   ========================================================= */
+.hod-notification-container {
+    width: calc(100% - 80px);
+    max-width: 1100px;
+    margin: 25px auto 0;
+}
+
+.hod-notification-container .hod-notification-section {
+    margin-bottom: 0;
+}
+
+@media (max-width: 650px) {
+    .hod-notification-container {
+        width: calc(100% - 30px);
+        margin-top: 15px;
+    }
+}
+/* Edit button */
+.my-request-edit-btn {
+    background-color: #2563eb;
+    color: #ffffff;
+    border: none;
+    padding: 7px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 8px;
+    font-weight: 500;
+}
+
+.my-request-edit-btn:hover {
+    background-color: #1d4ed8;
+}
+
+/* Delete button */
+.my-request-delete-btn {
+    background-color: #dc2626;
+    color: #ffffff;
+    border: none;
+    padding: 7px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.my-request-delete-btn:hover {
+    background-color: #b91c1c;
+}
